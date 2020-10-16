@@ -1,0 +1,27 @@
+{
+  "name": "flicksfan",
+  "version": "1.0.0",
+  "description": "Movies and TV shows sites",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "express"
+  ],
+  "author": "Mattlu88",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "standard": "^14.3.4"
+  }
+}
