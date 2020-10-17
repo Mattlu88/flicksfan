@@ -1,7 +1,8 @@
 const express = require('express')
 const middleware = require('./utils/middleware')
 const cors = require('cors')
-const router = require('express').Router()
+const moviesRouter = require('./controllers/movies')
+const { configTmdb } = require('./utils/tmdb')
 
 const app = express()
 
@@ -10,9 +11,7 @@ app.use(express.static('build'))
 app.use(express.json())
 app.use(middleware.requestLogger)
 
-app.use('/', router.get('/index', (req, res) => {
-  res.status(200).send('Welcome to Flicksfan')
-}))
+app.use('/api/movies', moviesRouter)
 
 app.use(middleware.unknownEndpoint)
 
