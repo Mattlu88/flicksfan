@@ -36,7 +36,7 @@ moviesRouter.get('/popular', async (req, res) => {
       ({
         id: r.id,
         title: r.title,
-        poster: `${tmdb.imagesBaseUrl}${tmdb.posterSize.sm}/${r.poster_path}`
+        poster: `${tmdb.imagesBaseUrl}${tmdb.posterSize.xxs}${r.poster_path}`
       }))
   ]
   res.status(200).send(movies)
